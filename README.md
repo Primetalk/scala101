@@ -1,5 +1,7 @@
 # scala101 - Scala Introduction
 
+[![Join the chat at https://gitter.im/primetalk-scala101/Lobby](https://badges.gitter.im/primetalk-scala101/Lobby.svg)](https://gitter.im/primetalk-scala101/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Prerequisites
 
 openjdk-8 - https://openjdk.java.net/install/index.html - Java development kit
