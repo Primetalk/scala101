@@ -66,3 +66,32 @@ mill hello.assembly
 ```bash
 java -jar out/hello/assembly/dest/out.jar
 ```
+
+## Use ssh with github
+
+1. Generate key
+
+```bash
+ssh-keygen
+```
+
+This command will create a pair of keys - private and public. Private should be kept
+in secret.
+
+2. Show PUBLIC key (~/.ssh/id_rsa.pub)
+
+```bash
+cat ~/.ssh/id_rsa.pub
+```
+
+3. Add public key to github
+
+In the right hand corner there is your avatar and a drop down menu. Select
+"Settings", then "SSH and GPG keys", then press "New SSH key". Paste your key there.
+
+4. Use SSH-method for cloning the scala101 repository
+
+```bash
+git clone git@github.com:/Primetalk/scala101.git
+```
+
