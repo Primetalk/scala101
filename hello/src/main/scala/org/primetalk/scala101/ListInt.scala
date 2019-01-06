@@ -41,6 +41,16 @@ object ListInt {
     case Cons(h, t) => sum(t) + h
   }
 
+  def sum2[T](lst: List[T])(zero: T, plus: (T,T) => T): T = lst match {
+    case Nil => zero
+    case h :: t => plus(sum2(t), h)
+  }
+
+  def sum3[T: Numeric](lst: List[T]): T = lst match {
+    case Nil => implicitly[Numeric[T]].zero
+    case h :: t => implicitly[Numeric[T]].plus(sum3(t), h)
+  }
+
   def product(lst: ListInt): Int = lst match {
     case NilInt => 1
     case Cons(h, t) => product(t) * h
@@ -49,6 +59,11 @@ object ListInt {
   def length(lst: ListInt): Int = lst match {
     case NilInt => 0
     case Cons(h, t) => length(t) + 1
+  }
+
+  def len[T](lst: List[T]): Int= lst match {
+    case Nil => 0
+    case _ :: t => len(t) + 1
   }
 
 //  sum(gen(5))
