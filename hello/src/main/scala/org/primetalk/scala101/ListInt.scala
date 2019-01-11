@@ -43,7 +43,7 @@ object ListInt {
 
   def sum2[T](lst: List[T])(zero: T, plus: (T,T) => T): T = lst match {
     case Nil => zero
-    case h :: t => plus(sum2(t), h)
+    case h :: t => sum2(t)(plus(zero, h), plus)
   }
 
   def sum3[T: Numeric](lst: List[T]): T = lst match {
