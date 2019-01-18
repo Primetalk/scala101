@@ -2,11 +2,13 @@
 
 ## Prerequisites
 
-openjdk-8 - https://openjdk.java.net/install/index.html - Java development kit
-git - https://git-scm.com/ - version control system
-mill - http://www.lihaoyi.com/mill/ - build system for Scala
+**openjdk-8** - https://openjdk.java.net/install/index.html - Java development kit
 
-IntelliJ Idea Community Edition - https://www.jetbrains.com/idea/download/ - IDE
+**git** - https://git-scm.com/ - version control system
+
+**mill** - http://www.lihaoyi.com/mill/ - build system for Scala
+
+**IntelliJ Idea Community Edition** - https://www.jetbrains.com/idea/download/ - IDE
 
 ## Getting started
 
