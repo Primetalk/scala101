@@ -11,10 +11,31 @@ object Misc {
 
   val input = "91212129"
   val inputLst = input.toCharArray.map(_ - '0').toList
-  inputLst
+//  inputLst
   sumSame(inputLst, inputLst.head)
 
   sumSame(2 :: 2 :: Nil, 1)
 
   Seq(1,2).sorted
+
+  def divide(a: Int, b: Int): Option[Int] = {
+    if(b == 0)
+      None
+    else
+      Some(a / b)
+  }
+
+  def boo: Option[Int] = {
+    for {
+      a <- divide(10,0)
+      b <- divide(10,2)
+    } yield a * b
+  }
+
+  def divide2(a: Int, b: Int): Either[String, Int] = {
+    if(b == 0)
+      Left("Divide by zero")
+    else
+      Right(a / b)
+  }
 }
