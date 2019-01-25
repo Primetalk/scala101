@@ -58,4 +58,11 @@ object ListOps {
     flatten1(bo)
   }
 
+  def flatMap1[A, B](list: List[A])(f: A => List[B]): List[B] = {
+    list
+      .foldRight(Nil: List[B])(
+        (a, currentList) => append(f(a), currentList)
+      )
+  }
+
 }
